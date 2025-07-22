@@ -5,7 +5,12 @@ const quizSchema = new mongoose.Schema(
     title: { type: String, required: true },
     description: { type: String },
     subject: { type: String, required: true },
-    semester: { type: String, required: true },
+    semester: {
+  type: String,
+  enum: ["First", "Second", "Summer"],
+  required: true
+},
+
     duration: { type: Number, required: true }, 
     totalMarks: { type: Number, required: true },
     questions: {
