@@ -6,7 +6,7 @@ const quizSchema = new mongoose.Schema(
     description: { type: String },
     subject: { type: String, required: true },
     semester: { type: String, required: true },
-    duration: { type: Number, required: true }, // in minutes
+    duration: { type: Number, required: true }, 
     totalMarks: { type: Number, required: true },
     questions: {
       type: [Object], // array of question objects
