@@ -2,12 +2,15 @@ import express from "express";
 import cors from "cors";
 import announcementRoutes from "./routes/announcement.routes.js";
 import quizRoutes from "./routes/quiz.routes.js";
+import dotenv from "dotenv";
+
 
 // Swagger setup
 import swaggerUi from "swagger-ui-express";
 import swaggerSpec from "../docs/swagger.js";
 
 const app = express();
+dotenv.config();
 
 // Middleware
 app.use(cors());
